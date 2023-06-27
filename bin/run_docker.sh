@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-CONTAINER_NAME="gampie/hello-app"
+CONTAINER_NAME="gokhantrnd/capstone-project"
 VERSION=1.000
 CONTAINER_PORT=80
 HOST_PORT=80

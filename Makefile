@@ -2,7 +2,7 @@
 # environment setup, install, lint and build
 
 #Vars
-CLUSTER_NAME=hello
+CLUSTER_NAME=capstone-project
 REGION_NAME=us-east-1
 KEYPAIR_NAME=capstone
 DEPLOYMENT_NAME=capstone-project
