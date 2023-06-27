@@ -45,7 +45,7 @@ jobs:
           command: |
             aws cloudformation deploy \
             --template Cloudformation/cloudformation.yml \
-            --stack << parameters.stack-name >> \
+            --stack << parameters.stack-name >> 
             --parameter-overrides ImageTag=${CIRCLE_SHA1}
 workflows:
   default:
@@ -65,3 +65,4 @@ workflows:
           context:
             - aws-12345-us-east-2
           stack-name: capstone-project
+          requires: [docker/publish]

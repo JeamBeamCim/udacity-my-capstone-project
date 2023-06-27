@@ -4,7 +4,7 @@ Parameters:
     Type: String
     Description: tag of the docker image to deploy in this stack
     Default: latest
-  …
+
 Resources:
   TaskDefMyApp:
     Type: AWS::ECS::TaskDefinition
