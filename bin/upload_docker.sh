@@ -15,7 +15,7 @@ dockerpath=${DOCKER_HUB_ID}/${DOCKER_REPOSITORY}
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
 docker build -t ${DOCKER_REPOSITORY}:${VERSION} ${dockerpath}:${VERSION} .
-docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
 
 # Step 3:
 # Push image to a docker repository
