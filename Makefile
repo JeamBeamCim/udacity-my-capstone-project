@@ -48,10 +48,10 @@ lint:
 	# https://github.com/koalaman/shellcheck: a linter for shell scripts
 	./bin/shellcheck -Cauto -a ./bin/*.sh
 	# https://github.com/hadolint/hadolint: a linter for Dockerfiles
-	./bin/hadolint hello_app/Dockerfile
+	./bin/hadolint app/Dockerfile
 	# https://www.pylint.org/: a linter for Python source code 
 	# This should be run from inside a virtualenv
-	pylint --output-format=colorized --disable=C hello_app/hello.py
+	pylint --output-format=colorized --disable=C app/app.py
 
 run-app:
 	python3 app/app.py
