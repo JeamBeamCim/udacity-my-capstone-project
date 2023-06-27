@@ -61,8 +61,7 @@ workflows:
               tag: ['$(<app/VERSION.txt)', 'latest']
               update-description: [true]    
           requires: [init]
-    deploy:
       - deploy-cfn:
-        context:
-          - aws-12345-us-east-2
-        stack-name: capstone-project
+          context:
+            - aws-12345-us-east-2
+          stack-name: capstone-project
