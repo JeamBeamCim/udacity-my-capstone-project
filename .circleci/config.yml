@@ -32,12 +32,16 @@ jobs:
             source .devops-capstone/bin/activate
             make lint
   deploy-cfn:
-    docker:
-      - image: amazon/aws-cli
+    parameters:
+      stack-name:
+        description: Name of the CloudFormation stack
+        type: string
+    executor: aws-cli/default
     steps:
       - checkout
+      - aws-cli/setup
       - run:
-          name: Cloudformation deployment
+          name: Deploy Cloudformation Template with new Docker image
           command: |
             aws cloudformation deploy \
             --template Cloudformation/cloudformation.yml \
