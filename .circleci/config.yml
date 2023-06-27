@@ -29,9 +29,7 @@ jobs:
           name: Run lint
           command: |
             source .devops-capstone/bin/activate
-            make lint 
-
-
+            make lint
 workflows:
   default:
     jobs:

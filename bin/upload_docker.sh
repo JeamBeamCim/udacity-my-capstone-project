@@ -14,7 +14,7 @@ dockerpath=${DOCKER_HUB_ID}/${DOCKER_REPOSITORY}
 # Step 2:
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
-docker login --username=$DOCKER_USERNAME --password=$DOCKER_PASSWORD
+docker login -u="${DOCKER_USERNAME}" -p="${DOCKER_PASSWORD}"
 docker tag ${DOCKER_REPOSITORY}:${VERSION} ${dockerpath}:${VERSION}
 
 # Step 3:
