@@ -31,17 +31,18 @@ jobs:
           command: |
             source .devops-capstone/bin/activate
             make lint
-  create_infrastructure:
+  deploy-cfn:
     docker:
       - image: amazon/aws-cli
     steps:
       - checkout
       - run:
-          name: Ensure backend infrastructure exist
+          name: Cloudformation deployment
           command: |
             aws cloudformation deploy \
-              --template-file Cloudformation/cloudformation.yml \
-              --stack-name capstone-project
+            --template Cloudformation/cloudformation.yml \
+            --stack << parameters.stack-name >> 
+            --parameter-overrides ImageTag=${CIRCLE_SHA1}
 workflows:
   default:
     jobs:
