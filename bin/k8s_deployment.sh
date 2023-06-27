@@ -3,7 +3,7 @@
 # This tags and uploads an image to Docker Hub
 
 # Set vars
-DOCKER_HUB_ID="registry.hub.docker.com/gokhantrnd "
+DOCKER_HUB_ID="registry.hub.docker.com/gokhantrnd"
 DOCKER_REPOSITORY="capstone-project"
 DEPLOYMENT_NAME=${DOCKER_REPOSITORY}
 CONTAINER_PORT=80

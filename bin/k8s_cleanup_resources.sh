@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-DEPLOYMENT_NAME="hello-app"
+DOCKER_REPOSITORY="capstone-project"
+DEPLOYMENT_NAME=${DOCKER_REPOSITORY}
 
 # Remove service & deployment
 echo

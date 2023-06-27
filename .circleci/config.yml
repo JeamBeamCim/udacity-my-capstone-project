@@ -41,10 +41,6 @@ workflows:
               path: [app]
               docker-context: [app]
               deploy: [true]
-              # We publish two images with different version tags: 
-              # - numbered version
-              # - "latest"
-              # tag: ['$(<app/VERSION.txt)-${CIRCLE_SHA1:0:7}', 'latest']
               tag: ['$(<app/VERSION.txt)', 'latest']
               update-description: [true]    
           requires: [init]
