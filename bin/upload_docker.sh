@@ -4,7 +4,7 @@
 # Assumes that an image is built via `run_docker.sh`
 DOCKER_HUB_ID="gokhantrnd"
 DOCKER_REPOSITORY="capstone-project"
-VERSION="1.000"
+VERSION="1.0.0"
 
 # Step 1:
 # Create dockerpath

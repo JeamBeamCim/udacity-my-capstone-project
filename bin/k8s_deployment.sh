@@ -7,8 +7,8 @@ DOCKER_HUB_ID="registry.hub.docker.com/gokhantrnd"
 DOCKER_REPOSITORY="capstone-project"
 DEPLOYMENT_NAME=${DOCKER_REPOSITORY}
 CONTAINER_PORT=80
-VERSION=1.000
-REPLICAS=4
+VERSION=1.0.0
+REPLICAS=3
 
 dockerpath=${DOCKER_HUB_ID}/${DOCKER_REPOSITORY}:${VERSION}
 
@@ -28,4 +28,4 @@ echo "Listing pods"
 kubectl get pods -o wide
 
 # Forward the container port to a host port
-#kubectl port-forward service/${DEPLOYMENT_NAME} ${HOST_PORT}:${CONTAINER_PORT}
+kubectl port-forward service/${DEPLOYMENT_NAME} ${HOST_PORT}:${CONTAINER_PORT}

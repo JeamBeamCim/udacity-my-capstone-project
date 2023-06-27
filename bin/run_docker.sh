@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 CONTAINER_NAME="gokhantrnd/capstone-project"
-VERSION=1.000
+VERSION=1.0.0
 CONTAINER_PORT=80
 HOST_PORT=80
 
