@@ -15,6 +15,6 @@ The following environment variablesz must be set for the project on CircleCI via
 | `AWS_DEFAULT_REGION`     | Used by the AWS CLI. Project value: "us-east-1"                                                                                                                 |
 | `AWS_ECR_URL`            | Identifies the AWS ECR docker image registry that the docker image will be pushed to, in the format `AWS_ACCOUNT_ID`.dkr.ecr.`AWS_DEFAULT_REGION`.amazonaws.com |
 
-### LINKSq
+### LINKS
 
-- [Github Repo](https://github.com/kelanik8/capstone-project.git)
+- [Github Repo](https://github.com/eamBeamCim/udacity-my-capstone-project.git)
