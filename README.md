@@ -14,7 +14,7 @@ The project includes the following main tasks:
     * Lints shell scripts, Dockerfile and python code
 * Create a Dockerfile to "containerize" the [application](app/app.py): [Dockerfile](app/Dockerfile)
 * Deploy to a public Docker Registry:
-  [Docker Hub](https://hub.docker.com/repository/docker/gampie/hello-app) the containerized application
+  [Docker Hub](https://hub.docker.com/repository/docker/gokhantrnd/capstone-project) the containerized application
 * Deploy a Kubernetes cluster:  `make eks-create-cluster`
 * Deploy the application:  `make k8s-deployment`
 * Update the app in the cluster, using a rolling-update strategy:  `make rolling-update`
