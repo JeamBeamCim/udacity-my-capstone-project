@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: 2010-09-09
+Parameters:
+  ImageTag:
+    Type: String
+    Description: tag of the docker image to deploy in this stack
+    Default: latest
+  …
+Resources:
+  TaskDefMyApp:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      Family: capstone-project
+      ContainerDefinitions:
+        - Image: !Sub '65D0574675575FFB8806B96D5F5F45E8.gr7.us-east-1.eks.amazonaws.com/capstone-project:${ImageTag}'
