@@ -39,7 +39,7 @@ workflows:
       - docker/publish:
           matrix:
             parameters:
-              image: [$DOCKER_LOGIN/capstone-project]
+              image: [$DOCKER_USERNAME/capstone-project]
               path: [app]
               docker-context: [app]
               deploy: [true]

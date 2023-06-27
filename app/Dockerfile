@@ -1,6 +1,6 @@
 FROM python:3.7-slim-buster
 
-LABEL author="ga.ampie@gmail.com"
+LABEL author="oezkan.goekhan@territory.group"
 
 # Working Directory
 WORKDIR /app
@@ -17,4 +17,4 @@ RUN pip install  --no-cache-dir --upgrade pip && \
 EXPOSE 80
 
 # Run app at container launch
-CMD ["python", "hello.py"]
+CMD ["python", "app.py"]
