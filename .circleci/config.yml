@@ -31,22 +31,17 @@ jobs:
           command: |
             source .devops-capstone/bin/activate
             make lint
-  deploy-cfn:
-    parameters:
-      stack-name:
-        description: Name of the CloudFormation stack
-        type: string
-    executor: aws-cli/default
+  create_infrastructure:
+    docker:
+      - image: amazon/aws-cli
     steps:
       - checkout
-      - aws-cli/setup
       - run:
-          name: Deploy Cloudformation Template with new Docker image
+          name: Ensure backend infrastructure exist
           command: |
             aws cloudformation deploy \
-            --template Cloudformation/cloudformation.yml \
-            --stack << parameters.stack-name >> 
-            --parameter-overrides ImageTag=${CIRCLE_SHA1}
+              --template-file Cloudformation/cloudformation.yml \
+              --stack-name capstone-project
 workflows:
   default:
     jobs:
